@@ -150,7 +150,7 @@ CATEGORIES.forEach((cat) => {
   cat.items = cat.items.map((it, i) => {
     const obj = typeof it === "string" ? { name: it, pre: false } : { ...it };
     if (obj.pre === undefined) obj.pre = false;
-    obj.img = `./assets/${cat.slug}/${String(i).padStart(2, "0")}.jpg`;
+    obj.img = `./${cat.slug}-${String(i).padStart(2, "0")}.jpg`;
     if (cat.note === "allpreorder") obj.pre = true;
     return obj;
   });
